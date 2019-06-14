@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 13.125" name="WebDb">
+  <DataContextMoniker Name="/WebDbDataContext" />
+  <nestedChildShapes>
+    <classShape Id="7c2c6b49-f658-44dd-b1fb-210a96372596" absoluteBounds="0.5, 0.5, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/WebDbDataContext/customerProfile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4853fa25-921e-4ea8-81aa-48c023d995f3" absoluteBounds="0.515, 0.96, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0dc98a23-fa3d-47ab-9a4c-11b58ff78504" absoluteBounds="2.75, 0.5, 2, 3.7257104492187496">
+      <DataClassMoniker Name="/WebDbDataContext/NewUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f7a01033-edd9-442d-8c1a-7f264ee1a0f4" absoluteBounds="2.765, 0.96, 1.9700000000000002, 3.16571044921875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bbdc9478-eff4-41ae-aebf-13973f8f726a" absoluteBounds="0.5, 3.25, 2, 3.3970157877604166">
+      <DataClassMoniker Name="/WebDbDataContext/WebControl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="57472008-4916-4283-b12d-0887cbdaaa64" absoluteBounds="0.515, 3.71, 1.9700000000000002, 2.8370157877604165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7c758fb8-5dc0-4fc3-9039-b02ed8643e9a" absoluteBounds="5, 0.5, 2, 4.0544051106770826">
+      <DataClassMoniker Name="/WebDbDataContext/ServiceByZipCode" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f06faebd-75fc-4583-91cb-06485a3c898c" absoluteBounds="5.015, 0.96, 1.9700000000000002, 3.494405110677083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cf78a7c0-bfdd-4dbe-a952-5b4cd1cec80c" absoluteBounds="5.25, 4.75, 2, 7.17700439453125">
+      <DataClassMoniker Name="/WebDbDataContext/WebDispatch" />
+      <nestedChildShapes>
+        <elementListCompartment Id="21222567-f4fd-48bf-bf4e-b2e7cdebbf6f" absoluteBounds="5.265, 5.21, 1.9700000000000002, 6.61700439453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2335ace1-f271-4248-af7b-ac60ebbfde10" absoluteBounds="7.375, 0.5, 2, 1.0961531575520833">
+      <DataClassMoniker Name="/WebDbDataContext/Holiday" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2cb979c1-eeda-4977-8429-736f8014ec1c" absoluteBounds="7.3900000000000006, 0.96, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="668495cf-a7be-4d81-8258-90dafb2cc53c" absoluteBounds="3, 4.75, 2, 8.16308837890625">
+      <DataClassMoniker Name="/WebDbDataContext/UserProfile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23fa210d-c687-40b1-a4e2-c21c245f00ec" absoluteBounds="3.015, 5.21, 1.9700000000000002, 7.6030883789062509" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aaa87089-6ea3-4244-84c7-e66801873d82" absoluteBounds="7.375, 2.25, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/WebDbDataContext/IGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0937e41e-bd85-4f59-85ef-e1396e6524e8" absoluteBounds="7.3900000000000006, 2.71, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

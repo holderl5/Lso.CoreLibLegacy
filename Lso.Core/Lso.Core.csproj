@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E13B0A41-5ECC-407B-A05F-3BC79154F689}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lso.Core</RootNamespace>
+    <AssemblyName>Lso.Core</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\thirdparty\automapper\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountsCreationRequest.cs" />
+    <Compile Include="AccountsCreationResponse.cs" />
+    <Compile Include="AccountsSearchResponse.cs" />
+    <Compile Include="AccountUtils.cs" />
+    <Compile Include="CannotCreateNewIdException.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="DbUtils.cs" />
+    <Compile Include="DomainObjBase.cs" />
+    <Compile Include="FullCustomerDataRequest.cs" />
+    <Compile Include="FullCustomerDataResponse.cs" />
+    <Compile Include="GroupCreationRequest.cs" />
+    <Compile Include="GroupSearchResponse.cs" />
+    <Compile Include="ILsoCustomer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ILsoCustomerNewDefaults.cs" />
+    <Compile Include="ILsoCustomerRepository.cs" />
+    <Compile Include="ILsoIGroup.cs" />
+    <Compile Include="ILsoIGroupRepository.cs" />
+    <Compile Include="ILsoPackage.cs" />
+    <Compile Include="ILsoPackageRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IPickupTimetable.cs" />
+    <Compile Include="IPickupTimetableRepository.cs" />
+    <Compile Include="ItemNotInRepositoryException.cs" />
+    <Compile Include="ITrackingDatum.cs" />
+    <Compile Include="IUserProfile.cs" />
+    <Compile Include="IWebshipAccount.cs" />
+    <Compile Include="IWebshipAccountNewDefaults.cs" />
+    <Compile Include="IWebshipAccountRepository.cs" />
+    <Compile Include="CustomerIDRequiredException.cs" />
+    <Compile Include="LsoCoreSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>LsoCoreSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="LsoCustomer.cs" />
+    <Compile Include="LsoCustomerFactory.cs" />
+    <Compile Include="LsoCustomerNewDefaults.cs" />
+    <Compile Include="LsoCustomerRepository.cs" />
+    <Compile Include="LsoIGroup.cs" />
+    <Compile Include="LsoIGroupFactory.cs" />
+    <Compile Include="LsoIGroupRepository.cs" />
+    <Compile Include="LsoPackage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LsoPackageFactory.cs" />
+    <Compile Include="OpsDb.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OpsDb.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="OpsDbDataContext.cs" />
+    <Compile Include="LsoPackageRepository.cs" />
+    <Compile Include="PickupDate.cs" />
+    <Compile Include="PickupTimetable.cs" />
+    <Compile Include="PickupTimetableRepository.cs" />
+    <Compile Include="RepositoryDoesNotExistException.cs" />
+    <Compile Include="RepositoryFactory.cs" />
+    <Compile Include="PrivilegedCustomerIDRequiredException.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="TrackingDatum.cs" />
+    <Compile Include="UserProfile.cs" />
+    <Compile Include="ValidationErrors.cs" />
+    <Compile Include="WebDb.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WebDb.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="WebDbDataContext.cs" />
+    <Compile Include="WebshipAccount.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebshipAccountFactory.cs" />
+    <Compile Include="WebshipAccountNewDefaults.cs" />
+    <Compile Include="WebShipAccountRepository.cs" />
+    <Compile Include="WebshipAccountData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LsoCoreSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>LsoCoreSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="OpsDb.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OpsDb.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="WebDb.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>WebDb.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WebDb.dbml.layout">
+      <DependentUpon>WebDb.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OpsDb.dbml.layout">
+      <DependentUpon>OpsDb.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

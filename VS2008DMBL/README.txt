@@ -1,0 +1,1 @@
+Visual studio 2010 no longer supports SQL Server 2000.  This project contains a visual studio 2008 project for creating DBML files.  Resulting DBML files can be copied to the Lso.Core project

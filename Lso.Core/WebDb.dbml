@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="LsoCoreTest" Class="WebDbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.0.5.14;Initial Catalog=LsoCoreTest;User ID=L5development" SettingsObjectName="SQL2kDBML.Properties.Settings" SettingsPropertyName="LsoCoreTestConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.customerProfile" Member="customerProfiles">
+    <Type Name="customerProfile">
+      <Column Name="CustID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CustName" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="CustContactPhone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PhyAddress1" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="PhyAddress2" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="PhyCity" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="PhyState" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="PhyZip" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="AccountLockout" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="KnownShipper" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NewUsers" Member="NewUsers">
+    <Type Name="NewUser">
+      <Column Name="UID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LoginName" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="UserFirstName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UserLastName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UserEmail" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="UserPWD" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CustID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CompanyName" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="CompanyPhone" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CompanyAddress1" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CompanyAddress2" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CompanyCity" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CompanyState" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="CompanyZip" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="Created" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="RequestDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WebControl" Member="WebControls">
+    <Type Name="WebControl">
+      <Column Name="ControlNo" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LastUIDAssigned" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastAirbillAssigned" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FailureRetry" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EntryComments" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DisplayEntComm" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ABExpDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EmailAddress" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="MaxCustPU" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaxLocPU" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NewAccountRequestEmail" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="LastParcelNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NotifyAdmin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PFuelCharge" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="GFuelCharge" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LastMexicoNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ServiceByZipCode" Member="ServiceByZipCodes">
+    <Type Name="ServiceByZipCode">
+      <Column Name="ZipCode" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DelivLoc" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="CityName" Type="System.String" DbType="VarChar(35)" CanBeNull="true" />
+      <Column Name="state" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="DelivRouteID" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="PURouteID" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="SalesRepEmp" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CallInTime" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="LastPickUpTime" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="WindowTime" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="SameDayService" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FutureService2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EarlyService" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SDSCallinTime" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="SDSReadyTime" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="Lat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Lon" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="BServiceTime" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="PickupSchedulingSoonest" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="PickupSchedulingLatest" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WebDispatch" Member="WebDispatches">
+    <Type Name="WebDispatch">
+      <Column Name="DispatchID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CustID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LocID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RouteID" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="AfterRouteID" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="CityCode" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="DispatchHub" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="DelivHub" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Destination" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="PickupContact" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PickUpTime" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="OSD" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Dolly" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SpcInstructions" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LastPickUpTime" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="DateTimeCalledIn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CloseTime" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="ReadyTime" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="DispatchTime" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="LastEditPUEmp" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="LastEditPUDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PickedUp" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PickUpConfirmation" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="PickUpComments" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SentRequest" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CoName" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Address1" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Address2" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PhoneExt" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="PUPieces" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalPUWeight" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CancelPURequest" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsSentToOPS" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="KnownShipper" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PickupDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Holidays" Member="Holidays">
+    <Type Name="Holiday">
+      <Column Name="Holiday" Member="Holiday1" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NextDelivDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserProfile" Member="UserProfiles">
+    <Type Name="UserProfile">
+      <Column Name="UID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LoginName" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="UserFirstName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UserLastName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UserEmail" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="UserPWD" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Administrator" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CustID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CompanyName" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="CompanyPhone" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CompanyAddress1" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CompanyAddress2" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CompanyCity" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CompanyState" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="CompanyZip" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="LastLoginDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LoginsToDate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LoginAttemptsToday" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="LoginFailedToday" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="PWDChangedLast" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="PWDResentLast" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="PWDResentCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PWDResentToday" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="ABEntryToday" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="AccountLockout" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PrintToLabel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DefaultService" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="BillingRefRequired" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EmailPOD" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SuperWebShipper" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UseLocBillingRef" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HandlingFee" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PrintPublishedRates" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsUserAdmin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ShowOnlyUserShipments" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DisableBillingReferenceRequired" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HardCodeBillingRef" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HardCodedBillingRefValue" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="HardCodeBillingRef2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HardCodedBillingRefValue2" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="newCustomerReferralSourceID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ActivityNotes" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IGroup" Member="IGroups">
+    <Type Name="IGroup">
+      <Column Name="GroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GroupName" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="GroupDescr" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sp_getuid" Method="sp_getuid">
+    <Parameter Name="Uid" Parameter="uid" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spRestoreWebshipAccountRepositoryTestState" Method="spRestoreWebshipAccountRepositoryTestState">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spRestorePickupTableTestState" Method="spRestorePickupTableTestState">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spRestoreAllTestState" Method="spRestoreAllTestState">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_getLatestTime" Method="sp_getLatestTime">
+    <Parameter Name="ZipCode" Parameter="zipCode" Type="System.String" DbType="VarChar(5)" />
+    <ElementType Name="sp_getLatestTimeResult">
+      <Column Name="callInTime" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="LastPickUpTime" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_checkMaxLocPU" Method="sp_checkMaxLocPU">
+    <Parameter Name="acctNo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="phoneNo" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="phoneExt" Type="System.String" DbType="VarChar(5)" />
+    <Parameter Name="pickupDate" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_getEarliestClosingTime" Method="sp_getEarliestClosingTime">
+    <ElementType Name="sp_getEarliestClosingTimeResult">
+      <Column Name="EarliestTime" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_RegisterReferralCheckEmail" Method="sp_RegisterReferralCheckEmail">
+    <Parameter Name="ToEmail" Parameter="toEmail" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Referrer" Parameter="referrer" Type="System.String" DbType="VarChar(254)" />
+    <Parameter Name="ReferredName" Parameter="referredName" Type="System.String" DbType="VarChar(254)" />
+    <Parameter Name="Body" Parameter="body" Type="System.String" DbType="VarChar(1000)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
