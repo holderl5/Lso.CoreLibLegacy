@@ -26,8 +26,8 @@
       <Column Name="CustID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="CompanyName" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
       <Column Name="CompanyPhone" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="CompanyAddress1" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="CompanyAddress2" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CompanyAddress1" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="CompanyAddress2" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
       <Column Name="CompanyCity" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
       <Column Name="CompanyState" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
       <Column Name="CompanyZip" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
@@ -142,8 +142,8 @@
       <Column Name="CustID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="CompanyName" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
       <Column Name="CompanyPhone" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="CompanyAddress1" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="CompanyAddress2" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CompanyAddress1" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="CompanyAddress2" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
       <Column Name="CompanyCity" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
       <Column Name="CompanyState" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
       <Column Name="CompanyZip" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />

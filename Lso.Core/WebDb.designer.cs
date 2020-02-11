@@ -749,7 +749,7 @@ namespace Lso.Core
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompanyAddress1", DbType="VarChar(30)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompanyAddress1", DbType="VarChar(60)")]
 		public string CompanyAddress1
 		{
 			get
@@ -769,7 +769,7 @@ namespace Lso.Core
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompanyAddress2", DbType="VarChar(30)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompanyAddress2", DbType="VarChar(60)")]
 		public string CompanyAddress2
 		{
 			get
@@ -3306,7 +3306,7 @@ namespace Lso.Core
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompanyAddress1", DbType="VarChar(30)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompanyAddress1", DbType="VarChar(60)")]
 		public string CompanyAddress1
 		{
 			get
@@ -3326,7 +3326,7 @@ namespace Lso.Core
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompanyAddress2", DbType="VarChar(30)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompanyAddress2", DbType="VarChar(60)")]
 		public string CompanyAddress2
 		{
 			get
