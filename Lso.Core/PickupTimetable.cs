@@ -146,8 +146,12 @@ namespace Lso.Core
 
         protected bool CanPickupToday()
         {
-            DateTime now = GetCurrentTime();
-            return (now.TimeOfDay < LatestCallInTime);
+            DateTime now = GetCurrentTime();            
+            var lastReadyTime = LastPickupTime.Subtract(new TimeSpan(0, 2, 0, 0));      // change to 2 hours for 2020 peak                
+            // Found this bug while testing peak changes:  LastCallInTime is specified in servicebyzipcode to protect certain zipcodes, but the PickupService does not ever look at it
+            // because of peak changes, is possible that lastReadyTime might be earlier than LatestCallInTime
+            var readyTimeEnd = EarliestTime(LatestCallInTime, lastReadyTime);
+            return (now.TimeOfDay < readyTimeEnd);
         }
 
         public IList<PickupDate> PickupDates
@@ -163,7 +167,7 @@ namespace Lso.Core
                 var closeTimeEnd = new TimeSpan(0, 23, 0, 0);
 
                 // last ready time is 1 hour before last pickup time
-                var lastReadyTime = LastPickupTime.Subtract(new TimeSpan(0, 2, 0, 0));      // change to 2 hours for 2020 peak
+                var lastReadyTime = LastPickupTime.Subtract(new TimeSpan(0, 2, 0, 0));      // change to 2 hours for 2020 peak                
 
                 var retval = new List<PickupDate>();
                 DateTime now = GetCurrentTime();
@@ -180,8 +184,12 @@ namespace Lso.Core
                         var rstart = LatestTime(now.TimeOfDay, readyTimeStart);
                         var cstart = LatestTime(now.TimeOfDay, closeTimeStart);
                         cstart = (now.TimeOfDay >= closeTimeStart) ? cstart + closeTimeExtra : cstart;
+
+                        // Found this bug while testing peak changes:  LastCallInTime is specified in servicebyzipcode to protect certain zipcodes, but the PickupService does not ever look at it
+                        // because of peak changes, is possible that lastReadyTime might be earlier than LatestCallInTime
+                        var readyTimeEnd = EarliestTime(LatestCallInTime, lastReadyTime);
                                         
-                        pickup.ReadyTimes = FillTimes(rstart, LatestCallInTime);
+                        pickup.ReadyTimes = FillTimes(rstart, readyTimeEnd);
                         pickup.CloseTimes = FillTimes(cstart, closeTimeEnd);
                     }
                     else
@@ -204,6 +212,15 @@ namespace Lso.Core
                 return ts1;
             }
 
+            return ts2;
+        }
+
+        protected TimeSpan EarliestTime(TimeSpan ts1, TimeSpan ts2)
+        {
+            if (ts1 < ts2)
+            {
+                return ts1;
+            }
             return ts2;
         }
 
