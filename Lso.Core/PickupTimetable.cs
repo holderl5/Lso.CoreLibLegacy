@@ -163,7 +163,7 @@ namespace Lso.Core
                 var closeTimeEnd = new TimeSpan(0, 23, 0, 0);
 
                 // last ready time is 1 hour before last pickup time
-                var lastReadyTime = LastPickupTime.Subtract(new TimeSpan(0, 1, 0, 0));
+                var lastReadyTime = LastPickupTime.Subtract(new TimeSpan(0, 2, 0, 0));      // change to 2 hours for 2020 peak
 
                 var retval = new List<PickupDate>();
                 DateTime now = GetCurrentTime();
